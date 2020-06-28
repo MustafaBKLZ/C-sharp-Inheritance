@@ -7,13 +7,55 @@ namespace C_sharp_Inheritance.Person
 {
     public class Teacher : Person //Teacher class'ı Person class'ından miras alıyor.
     {
+        //
+        //Encapsulation 
+        //
+        private string _Unvan; //Teacher sınıfında kullanılmak üzere Unvan adında bir değişken tanımladık.
+        public string Unvan
+        {
+            //get ile karşıma çıkmasını istediğim değeri tanımlıyorum.
+            get { return _Unvan; }
+            //Unvan boş gerilse bile düzenleme yapıyorum.
+            set
+            {
+                if (_Unvan is null)
+                    _Unvan = "Öğretmen";
+                else
+                    _Unvan = value;
+            }
+        }
+        //
+        //Encapsulation 
+        //
 
-        private string Unvan; //Teacher sınıfında kullanılmak üzere Unvan adında bir değişken tanımladık.
+
+        //
+        //Encapsulation 
+        //
+        private DateTime _GoreveBaslamaTarih; //Teacher sınıfında kullanılmak üzere Unvan adında bir değişken tanımladık.
+        public DateTime GoreveBaslamaTarih
+        {
+            //get ile karşıma çıkmasını istediğim değeri tanımlıyorum.
+            get { return _GoreveBaslamaTarih; }
+            //Unvan boş gerilse bile düzenleme yapıyorum.
+            set
+            {
+                if (_GoreveBaslamaTarih.Year < this.DogumTarihi.AddYears(20).Year)
+                    MessageBox.Show("Hatalı Göreve Başlama Tarih Bilgisi");
+                else
+                    _GoreveBaslamaTarih = value;
+            }
+        }
+        //
+        //Encapsulation 
+        //
+
+
 
         /// <summary>
         /// Boş bir constructor metod.
         /// </summary>
-        public Teacher() 
+        public Teacher()
         {
             // constructor metod / yapıcı metod
         }
@@ -26,7 +68,7 @@ namespace C_sharp_Inheritance.Person
         /// <param name="dogum_tarih"></param>
         /// <param name="cinsiyet"></param>
         /// <param name="unvan"></param>
-        public Teacher(string adi, string soyadi, DateTime dogum_tarih, string cinsiyet, string unvan) 
+        public Teacher(string adi, string soyadi, DateTime dogum_tarih, string cinsiyet, string unvan)
         {
             // constructor metod / yapıcı metod
             this.Adı = adi;
@@ -49,7 +91,7 @@ namespace C_sharp_Inheritance.Person
               + Environment.NewLine + this.Soyadı
               + Environment.NewLine + this.DogumTarihi
               + Environment.NewLine + this.Cinsiyeti
-              + Environment.NewLine + this.Unvan);
+              + Environment.NewLine + this._Unvan);
         }
 
 

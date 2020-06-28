@@ -47,6 +47,8 @@ namespace C_sharp_Inheritance
         List<Person.Teacher> teacher_list = new List<Person.Teacher>();
         private void btn_teacher_ekle_Click(object sender, EventArgs e)
         {
+            //teacher.Unvan = "";
+
             teacher_list.Add(new Person.Teacher(txt_teacher_ad.Text, txt_teacher_soyAd.Text, dt_teacher_dogum_Tar.Value, txt_teacher_cinsiyet.Text, txt_teacher_unvan.Text));
             MessageBox.Show("Eklendi");
             tc_listele();
