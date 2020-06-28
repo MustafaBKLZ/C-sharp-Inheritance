@@ -7,10 +7,7 @@ namespace C_sharp_Inheritance.Cokgen
 {
     public class Ucgen : Cokgen
     {
-        public Ucgen()
-        {
-
-        }
+        public Ucgen() { }
 
         public override double AlaniniBul(params double[] kenarlar)
         {
@@ -19,6 +16,9 @@ namespace C_sharp_Inheritance.Cokgen
             return d;
         }
 
-
+        public override double CevresiniBul(params double[] kenarlar)
+        {
+            return 0;
+        }
     }
 }

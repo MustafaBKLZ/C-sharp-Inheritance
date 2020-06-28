@@ -85,5 +85,24 @@ namespace C_sharp_Inheritance.Person
             }
             return dt;
         }
+
+        public override void Calis()
+        {
+            MessageBox.Show("Çalıştım");
+        }
+        public override void SuIc()
+        {
+            MessageBox.Show("Su İçtim");
+        }
+
+        public override void Uyu()
+        {
+            MessageBox.Show("Uyudum");
+        }
+
+        public override void YemekYe()
+        {
+            MessageBox.Show("Yemek Yedim");
+        }
     }
 }

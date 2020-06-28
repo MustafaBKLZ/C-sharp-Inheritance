@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace C_sharp_Inheritance
 {
-    public partial class Form1 : Form
+    public partial class Form1 : System.Windows.Forms.Form
     {
         public Form1()
         {
@@ -59,6 +59,12 @@ namespace C_sharp_Inheritance
         {
             dataGridView2.DataSource = teacher.makeDataTable(teacher_list);
         }
+
+
+
+
+
+
 
         private void btn_ucgen_alan_hesapla_Click(object sender, EventArgs e)
         {

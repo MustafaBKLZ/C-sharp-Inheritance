@@ -5,7 +5,6 @@ using System.Windows.Forms;
 
 namespace C_sharp_Inheritance.Person
 {
-
     public class Student : Person // Student class'ı Person class'ından miras aldığını belirtiyoruz.
     {
         private string Okul; //  Stundent nesnesinde kullanacağımız bir değişken tanımlıyoruz.
@@ -51,9 +50,6 @@ namespace C_sharp_Inheritance.Person
                   + Environment.NewLine + this.Okul);
         }
 
-
-       
-
         /// <summary>
         /// Gönderilen List nesnesinden DataTable Üretir.
         /// </summary>
@@ -87,6 +83,23 @@ namespace C_sharp_Inheritance.Person
             return dt;
         }
 
+        public override void Calis()
+        {
+            MessageBox.Show("Çalıştım");
+        }
+        public override void SuIc()
+        {
+            MessageBox.Show("Su İçtim");
+        }
 
+        public override void Uyu()
+        {
+            MessageBox.Show("Uyudum");
+        }
+
+        public override void YemekYe()
+        {
+            MessageBox.Show("Yemek Yedim");
+        }
     }
 }

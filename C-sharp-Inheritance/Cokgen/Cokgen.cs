@@ -10,7 +10,8 @@ namespace C_sharp_Inheritance.Cokgen
 
         public Cokgen() { }
 
-        public abstract double AlaniniBul(params double[] kenarlar);
+        public abstract double AlaniniBul(params double[] kenarlar);//dinamik parametre alan metod.
+        public abstract double CevresiniBul(params double[] kenarlar);//dinamik parametre alan metod.
 
 
     }

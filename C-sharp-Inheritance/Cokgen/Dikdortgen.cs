@@ -7,15 +7,14 @@ namespace C_sharp_Inheritance.Cokgen
 {
     public class Dikdortgen : Cokgen
     {
-        public Dikdortgen()
-        {
-
-        }
-
+        public Dikdortgen() { }
         public override double AlaniniBul(params double[] kenarlar)
         {
             return kenarlar[0] * kenarlar[1];
         }
-
+        public override double CevresiniBul(params double[] kenarlar)
+        {
+            return 0;
+        }
     }
 }
