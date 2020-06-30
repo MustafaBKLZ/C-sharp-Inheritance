@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace C_sharp_Inheritance.Cokgen
+namespace C_sharp_Inheritance.Inheritance.Cokgen
 {
     public abstract class Cokgen
     {

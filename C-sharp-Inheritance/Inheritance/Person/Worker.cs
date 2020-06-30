@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace C_sharp_Inheritance.Person
+namespace C_sharp_Inheritance.Inheritance.Person
 {
     public class Worker : Person // Worker class'ı Person class'ından miras alıyor.
     {

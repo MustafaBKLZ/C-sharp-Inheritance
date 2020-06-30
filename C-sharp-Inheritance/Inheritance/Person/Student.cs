@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
-namespace C_sharp_Inheritance.Person
+namespace C_sharp_Inheritance.Inheritance.Person
 {
     public class Student : Person // Student class'ı Person class'ından miras aldığını belirtiyoruz.
     {

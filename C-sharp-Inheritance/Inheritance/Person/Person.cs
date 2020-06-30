@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace C_sharp_Inheritance.Person
+namespace C_sharp_Inheritance.Inheritance.Person
 {
     public abstract class Person
     {

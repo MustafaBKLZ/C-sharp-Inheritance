@@ -58,6 +58,12 @@
             this.btn_teacher_ekle = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.btn_dd_alan_hesapla = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -85,18 +91,18 @@
             this.txn_kenar_2_uc = new C_sharp_Inheritance.TextBoxNumbersOnly();
             this.txn_kenar_1_uc = new C_sharp_Inheritance.TextBoxNumbersOnly();
             this.txn_sonuc_uc = new C_sharp_Inheritance.TextBoxNumbersOnly();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btn_Rectangle = new System.Windows.Forms.Button();
+            this.btn_circle = new System.Windows.Forms.Button();
+            this.btn_Square = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_studen_ekle
@@ -123,6 +129,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -427,6 +434,60 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Çokgen";
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(863, 74);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(26, 17);
+            this.label31.TabIndex = 72;
+            this.label31.Text = "cm";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(863, 45);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(26, 17);
+            this.label30.TabIndex = 71;
+            this.label30.Text = "cm";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(535, 45);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(26, 17);
+            this.label29.TabIndex = 70;
+            this.label29.Text = "cm";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(188, 103);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(26, 17);
+            this.label28.TabIndex = 69;
+            this.label28.Text = "cm";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(188, 45);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(26, 17);
+            this.label27.TabIndex = 68;
+            this.label27.Text = "cm";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(188, 74);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(26, 17);
+            this.label21.TabIndex = 68;
+            this.label21.Text = "cm";
+            // 
             // btn_dd_alan_hesapla
             // 
             this.btn_dd_alan_hesapla.Location = new System.Drawing.Point(748, 158);
@@ -676,59 +737,58 @@
             this.txn_sonuc_uc.TabIndex = 37;
             this.txn_sonuc_uc.Text = "0";
             // 
-            // label21
+            // tabPage4
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(188, 74);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(26, 17);
-            this.label21.TabIndex = 68;
-            this.label21.Text = "cm";
+            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Controls.Add(this.btn_Square);
+            this.tabPage4.Controls.Add(this.listBox1);
+            this.tabPage4.Controls.Add(this.btn_Rectangle);
+            this.tabPage4.Controls.Add(this.btn_circle);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1240, 540);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Polymorphism / Interface";
             // 
-            // label27
+            // listBox1
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(188, 45);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(26, 17);
-            this.label27.TabIndex = 68;
-            this.label27.Text = "cm";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(8, 51);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(273, 452);
+            this.listBox1.TabIndex = 6;
             // 
-            // label28
+            // btn_Rectangle
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(188, 103);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(26, 17);
-            this.label28.TabIndex = 69;
-            this.label28.Text = "cm";
+            this.btn_Rectangle.Location = new System.Drawing.Point(101, 6);
+            this.btn_Rectangle.Name = "btn_Rectangle";
+            this.btn_Rectangle.Size = new System.Drawing.Size(87, 39);
+            this.btn_Rectangle.TabIndex = 5;
+            this.btn_Rectangle.Text = "Rectangle";
+            this.btn_Rectangle.UseVisualStyleBackColor = true;
+            this.btn_Rectangle.Click += new System.EventHandler(this.btn_Rectangle_Click);
             // 
-            // label29
+            // btn_circle
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(535, 45);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(26, 17);
-            this.label29.TabIndex = 70;
-            this.label29.Text = "cm";
+            this.btn_circle.Location = new System.Drawing.Point(8, 6);
+            this.btn_circle.Name = "btn_circle";
+            this.btn_circle.Size = new System.Drawing.Size(87, 39);
+            this.btn_circle.TabIndex = 4;
+            this.btn_circle.Text = "Circle";
+            this.btn_circle.UseVisualStyleBackColor = true;
+            this.btn_circle.Click += new System.EventHandler(this.btn_circle_Click);
             // 
-            // label30
+            // btn_Square
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(863, 45);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(26, 17);
-            this.label30.TabIndex = 71;
-            this.label30.Text = "cm";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(863, 74);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(26, 17);
-            this.label31.TabIndex = 72;
-            this.label31.Text = "cm";
+            this.btn_Square.Location = new System.Drawing.Point(194, 6);
+            this.btn_Square.Name = "btn_Square";
+            this.btn_Square.Size = new System.Drawing.Size(87, 39);
+            this.btn_Square.TabIndex = 7;
+            this.btn_Square.Text = "Square";
+            this.btn_Square.UseVisualStyleBackColor = true;
+            this.btn_Square.Click += new System.EventHandler(this.btn_Square_Click);
             // 
             // Form1
             // 
@@ -748,6 +808,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -817,5 +878,10 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btn_Rectangle;
+        private System.Windows.Forms.Button btn_circle;
+        private System.Windows.Forms.Button btn_Square;
     }
 }
