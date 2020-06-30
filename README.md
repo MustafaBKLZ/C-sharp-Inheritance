@@ -5,8 +5,10 @@ Bu proje aşağıdaki konuları içerir
 * Interface
 
 28.06.2020
-* Proje yüklendi. Inheritance https://mustafabukulmez.com/2020/06/28/c-inheritance-c-miras-kavrami/
-* Student ve Teacher sınıflarına Encapsulation işlemi uygulandı. https://mustafabukulmez.com/2020/06/28/c-class-encapsulation-kapsulleme-get-set-kullanimi/
+* Proje yüklendi. Inheritance 
+https://mustafabukulmez.com/2020/06/28/c-inheritance-c-miras-kavrami/
+* Student ve Teacher sınıflarına Encapsulation işlemi uygulandı. 
+https://mustafabukulmez.com/2020/06/28/c-class-encapsulation-kapsulleme-get-set-kullanimi/
 
 
 
