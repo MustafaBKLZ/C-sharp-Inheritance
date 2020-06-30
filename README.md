@@ -1,2 +1,5 @@
-# C-sharp-Inheritance
-Inheritance konusu üzerine örnek proje
+# C# Inheritance / Polymorphism / Interface
+Bu proje aşağıdaki konuları içerir
+* Interface
+* Polymorphism
+* Interface
