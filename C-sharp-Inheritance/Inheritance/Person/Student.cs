@@ -1,88 +1,73 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace C_sharp_Inheritance.Inheritance.Person
 {
-    public class Student : Person // Student class'ı Person class'ından miras aldığını belirtiyoruz.
+    public class Student : Person, Interface.SQLWorks
+    /* Student Class'a -- Interface.SQLWorks Interface(Arayüz) -- uyguluyoruz. 
+     *  Class'ın en altında Interface'den gelen ve mecburi eklenmesi gereken metodlar var.*/
     {
-        private string Okul; //  Stundent nesnesinde kullanacağımız bir değişken tanımlıyoruz.
+        public override void makeAction() { }
+        public Student() { makeDataTable(); }
 
-        /// <summary>
-        /// Boş bir constructor metod.
-        /// </summary>
-        public Student()
+        private DataRow datarow;
+        public static DataTable StudentDataTable = new DataTable();
+        // datatable static olmazsa class her çalıştırıldığında yeniden create edileceğinden datagridview'e sadece son eklenen satır gelir.
+        // Static olunca formda class tanımlandığı için form açılmadan create edilir ve bir form tekrar açılana kadar tekrar create edilmez.
+        private void makeDataTable() // datatable'a kolonları ekler.
         {
-            // constructor metod / yapıcı metod
+            StudentDataTable.Columns.Add("ID");
+            StudentDataTable.Columns.Add("Adı");
+            StudentDataTable.Columns.Add("Soyadı");
+            StudentDataTable.Columns.Add("DogumTarihi");
+            StudentDataTable.Columns.Add("Cinsiyeti");
+            StudentDataTable.Columns.Add("Okul");
         }
 
-        /// <summary>
-        ///  Parametre alan constructor metod.
-        /// </summary>
-        /// <param name="adi"></param>
-        /// <param name="soyadi"></param>
-        /// <param name="dogum_tarih"></param>
-        /// <param name="cinsiyet"></param>
-        /// <param name="okul"></param>
-        public Student(string adi, string soyadi, DateTime dogum_tarih, string cinsiyet, string okul) 
+
+        private int ID; //  Stundent nesnesinde kullanacağımız bir değişken tanımlıyoruz.
+        private string Okul; //  Stundent nesnesinde kullanacağımız bir değişken tanımlıyoruz.
+
+        public Student(string adi, string soyadi, DateTime dogum_tarih, string cinsiyet, string okul, int ID = 0) // varsyılan değerli parametre. Dışarıdan gönderilmesi zorunlu değildir.
         {
-            // constructor metod / yapıcı metod
             this.Adı = adi;
             this.Soyadı = soyadi;
             this.DogumTarihi = dogum_tarih;
             this.Cinsiyeti = cinsiyet;
             this.Okul = okul;
+            if (ID == 0) // ID 0 geliyorsa inserttir
+                try
+                {
+                    this.ID = Convert.ToInt32(StudentDataTable.Rows[StudentDataTable.Rows.Count - 1]["ID"]) + 1; // sıradaki ID'yi istedik.
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    this.ID = 1; // Eğer DataTable boş ise 1 verecek
+                }
+            else
+                this.ID = ID; // Dışarıdan ID bilgisi gelmişse onu kullanacağız.
+
+            datarow = CreateDrow(this); // gelen verilerden bir datarow ürettik
+            StudentDataTable.Rows.Add(datarow); // datarow'u datatable'a ekledik.
         }
 
-        /// <summary>
-        /// Ben bir öğrenciyim MessageBox'u üretir ve eklenen öğrencinin bilgilerini gösterir.
-        /// </summary>
-        public override void makeAction()
+
+        private DataRow CreateDrow(Student item) // Datatable için bir datarow üretir.
         {
-            //Person sınıfında tanımlanan makeAction abstract metodu override ederek
-            //metodun içini istediğimiz gibi doldurduk.
-            MessageBox.Show("Ben bir öğrenciyim" + Environment.NewLine
-                  + Environment.NewLine + this.Adı
-                  + Environment.NewLine + this.Soyadı
-                  + Environment.NewLine + this.DogumTarihi
-                  + Environment.NewLine + this.Cinsiyeti
-                  + Environment.NewLine + this.Okul);
+            DataRow userRow = StudentDataTable.NewRow();
+            userRow["ID"] = item.ID;
+            userRow["Adı"] = item.Adı;
+            userRow["Soyadı"] = item.Soyadı;
+            userRow["DogumTarihi"] = item.DogumTarihi;
+            userRow["Cinsiyeti"] = item.Cinsiyeti;
+            userRow["Okul"] = item.Okul;
+            return userRow;
         }
 
-        /// <summary>
-        /// Gönderilen List nesnesinden DataTable Üretir.
-        /// </summary>
-        /// <param name="list"> List<Student> </param>
-        /// <returns></returns>
-        public DataTable makeDataTable(List<Student> list)
-        {
-            // Formda hazırladığımız List'i bu metoda gönderek bize bir DataTable üretmesini istiyoruz. 
-            // bu metod bu Student Class'ına aittir.
-            DataTable dt = new DataTable();
-            dt.Columns.Add("ID");
-            dt.Columns.Add("Adı");
-            dt.Columns.Add("Soyadı");
-            dt.Columns.Add("DogumTarihi");
-            dt.Columns.Add("Cinsiyeti");
-            dt.Columns.Add("Okul");
-
-            int sayac = 0;
-            foreach (Student item in list)
-            {
-                DataRow userRow = dt.NewRow();
-                sayac++;
-                userRow["ID"] = sayac;
-                userRow["Adı"] = item.Adı;
-                userRow["Soyadı"] = item.Soyadı;
-                userRow["DogumTarihi"] = item.DogumTarihi;
-                userRow["Cinsiyeti"] = item.Cinsiyeti;
-                userRow["Okul"] = item.Okul;
-                dt.Rows.Add(userRow);
-            }
-            return dt;
-        }
-
+        // Miras Alınan Sınıftan gelen metodlar
         public override void Calis()
         {
             MessageBox.Show("Çalıştım");
@@ -101,5 +86,28 @@ namespace C_sharp_Inheritance.Inheritance.Person
         {
             MessageBox.Show("Yemek Yedim");
         }
+        // Miras Alınan Sınıftan gelen metodlar
+
+
+
+        // SQLWorks Interface / Arayüzünden gelen metodlar. Eklenmesi zorunludur. 
+        public object Save()
+        {
+            return null;
+        }
+
+        public object Update()
+        {
+            return null;
+        }
+
+        public object Delete(int id)
+        {
+            var query = StudentDataTable.AsEnumerable().Where(r => r.Field<string>("ID") == id.ToString());
+            foreach (var row in query.ToList()) row.Delete();
+            StudentDataTable.AcceptChanges();
+            return true;
+        }
+        // SQLWorks Interface / Arayüzünden gelen metodlar. Eklenmesi zorunludur. 
     }
 }

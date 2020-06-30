@@ -63,6 +63,7 @@
     <Compile Include="Polymorphism\MyRectangle.cs" />
     <Compile Include="Polymorphism\MyShape.cs" />
     <Compile Include="Polymorphism\MySquare.cs" />
+    <Compile Include="Interface\SQLWorks.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextBoxNumbersOnly.cs">

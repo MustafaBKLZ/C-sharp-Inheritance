@@ -32,6 +32,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_sil = new System.Windows.Forms.Button();
             this.dt_Student_dogum_Tar = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Student_okul = new System.Windows.Forms.TextBox();
@@ -92,10 +93,10 @@
             this.txn_kenar_1_uc = new C_sharp_Inheritance.TextBoxNumbersOnly();
             this.txn_sonuc_uc = new C_sharp_Inheritance.TextBoxNumbersOnly();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btn_Square = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btn_Rectangle = new System.Windows.Forms.Button();
             this.btn_circle = new System.Windows.Forms.Button();
-            this.btn_Square = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -123,6 +124,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1234, 396);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tabControl1
             // 
@@ -141,6 +143,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.btn_sil);
             this.tabPage1.Controls.Add(this.dt_Student_dogum_Tar);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.txt_Student_okul);
@@ -160,6 +163,16 @@
             this.tabPage1.Size = new System.Drawing.Size(1240, 540);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Student";
+            // 
+            // btn_sil
+            // 
+            this.btn_sil.Location = new System.Drawing.Point(411, 6);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(95, 46);
+            this.btn_sil.TabIndex = 16;
+            this.btn_sil.Text = "Sil";
+            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // dt_Student_dogum_Tar
             // 
@@ -751,13 +764,23 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Polymorphism / Interface";
             // 
+            // btn_Square
+            // 
+            this.btn_Square.Location = new System.Drawing.Point(194, 6);
+            this.btn_Square.Name = "btn_Square";
+            this.btn_Square.Size = new System.Drawing.Size(87, 39);
+            this.btn_Square.TabIndex = 7;
+            this.btn_Square.Text = "Square";
+            this.btn_Square.UseVisualStyleBackColor = true;
+            this.btn_Square.Click += new System.EventHandler(this.btn_Square_Click);
+            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(8, 51);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(308, 452);
+            this.listBox1.Size = new System.Drawing.Size(273, 452);
             this.listBox1.TabIndex = 6;
             // 
             // btn_Rectangle
@@ -779,16 +802,6 @@
             this.btn_circle.Text = "Circle";
             this.btn_circle.UseVisualStyleBackColor = true;
             this.btn_circle.Click += new System.EventHandler(this.btn_circle_Click);
-            // 
-            // btn_Square
-            // 
-            this.btn_Square.Location = new System.Drawing.Point(194, 6);
-            this.btn_Square.Name = "btn_Square";
-            this.btn_Square.Size = new System.Drawing.Size(87, 39);
-            this.btn_Square.TabIndex = 7;
-            this.btn_Square.Text = "Square";
-            this.btn_Square.UseVisualStyleBackColor = true;
-            this.btn_Square.Click += new System.EventHandler(this.btn_Square_Click);
             // 
             // Form1
             // 
@@ -883,5 +896,6 @@
         private System.Windows.Forms.Button btn_Rectangle;
         private System.Windows.Forms.Button btn_circle;
         private System.Windows.Forms.Button btn_Square;
+        private System.Windows.Forms.Button btn_sil;
     }
 }
