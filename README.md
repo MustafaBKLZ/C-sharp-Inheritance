@@ -1,15 +1,14 @@
 # C# Inheritance / Encapsulation / Polymorphism / Interface
 Bu proje aşağıdaki konuları içerir
-* Interface
+* Inheritance -  https://mustafabukulmez.com/2020/06/28/c-inheritance-c-miras-kavrami/
+* Encapsulation - https://mustafabukulmez.com/2020/06/28/c-class-encapsulation-kapsulleme-get-set-kullanimi/
 * Polymorphism
-* Interface
+* Interface - https://mustafabukulmez.com/2020/07/01/c-interface-kavrami-ve-kullanimi/
+
 
 28.06.2020
 * Proje yüklendi. Inheritance 
-https://mustafabukulmez.com/2020/06/28/c-inheritance-c-miras-kavrami/
 * Student ve Teacher sınıflarına Encapsulation işlemi uygulandı. 
-https://mustafabukulmez.com/2020/06/28/c-class-encapsulation-kapsulleme-get-set-kullanimi/
-
 
 
 30.06.2020
@@ -18,4 +17,4 @@ https://mustafabukulmez.com/2020/06/28/c-class-encapsulation-kapsulleme-get-set-
 
 01.07.2020
 Birkaç küçük değişikşik yapıldı
-C# Interface konusu dersi yazıldı. https://mustafabukulmez.com/2020/07/01/c-interface-kavrami-ve-kullanimi/
+C# Interface konusu dersi yazıldı. 
