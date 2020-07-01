@@ -107,8 +107,8 @@ namespace C_sharp_Inheritance
 
 
             // Interface
-            listBox1.Items.Add(s.Save());   
-            listBox1.Items.Add(s.Update()); 
+            listBox1.Items.Add(s.Save());
+            listBox1.Items.Add(s.Update());
             listBox1.Items.Add(s.Delete());
             // Bu metotlar, MyShape sınıfına uygulanan MyShapeWorks Interface 'den gelen metotlardır.
             // Interface,  MyShape sınıfında değilde MySquare sınıfında uygulanmış olsaydı bu şekilde kullanım yapamazdık..
@@ -155,12 +155,15 @@ namespace C_sharp_Inheritance
             {
                 int ID = Convert.ToInt32(row.Cells["ID"].Value.ToString());
                 student.Delete(ID); // Bu delete işlemi SQLWorks Interface sayesinde oluyor. Sınıfa özel üretilmiş bir metod.
+
             }
             catch (ArgumentException)
             {
                 MessageBox.Show("Bir satıra tıklamanız gerekiyor.");
             }
             dataGridView1.DataSource = Inheritance.Person.Student.StudentDataTable;
+
+
         }
 
 
@@ -171,6 +174,20 @@ namespace C_sharp_Inheritance
                 row = this.dataGridView1.Rows[e.RowIndex];
         }
 
+        void Ornek()
+        {
+            Interface.SQLWorks[] works = new Interface.SQLWorks[2];
+            student = new Inheritance.Person.Student();
+            works[0] = student;
+            Inheritance.Person.Worker worker = new Inheritance.Person.Worker();
+            works[0] = worker;
+
+            for (int i = 0; i < works.Length; i++)
+            {
+                works[i].Save();
+            }
+
+        }
         #endregion
 
     }

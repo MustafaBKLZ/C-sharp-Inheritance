@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace C_sharp_Inheritance.Inheritance.Person
 {
-    public class Worker : Person // Worker class'ı Person class'ından miras alıyor.
+    public class Worker : Person, Interface.SQLWorks // Worker class'ı Person class'ından miras alıyor.
     {
 
         private double Maas; //Worker sınıfında kullanılmak üzere Unvan adında bir değişken tanımladık.
@@ -105,6 +105,21 @@ namespace C_sharp_Inheritance.Inheritance.Person
         public override void YemekYe()
         {
             MessageBox.Show("Yemek Yedim");
+        }
+
+        public object Save()
+        {
+            throw new NotImplementedException();
+        }
+
+        public object Update(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object Delete(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -90,13 +90,13 @@ namespace C_sharp_Inheritance.Inheritance.Person
 
 
 
-        // SQLWorks Interface / Arayüzünden gelen metodlar. Eklenmesi zorunludur. 
+        //SQLWorks Interface / Arayüzünden gelen metodlar.Eklenmesi zorunludur.
         public object Save()
         {
             return null;
         }
 
-        public object Update()
+        public object Update(int id)
         {
             return null;
         }

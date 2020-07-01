@@ -8,7 +8,7 @@ namespace C_sharp_Inheritance.Interface
     interface SQLWorks
     {
         object Save();
-        object Update();
+        object Update(int id);
         object Delete(int id);
     }
 }
