@@ -16,9 +16,9 @@ Bu proje aşağıdaki konuları içerir
 
 
 01.07.2020
-Birkaç küçük değişikşik yapıldı
-C# Interface konusu dersi yazıldı. 
+* Birkaç küçük değişikşik yapıldı
+* C# Interface konusu dersi yazıldı. 
 
 02.07.2020
-Birkaç küçük değişikşik yapıldı
-C# Polymorphism konusu dersi yazıldı. 
+* Birkaç küçük değişikşik yapıldı
+* C# Polymorphism konusu dersi yazıldı. 
