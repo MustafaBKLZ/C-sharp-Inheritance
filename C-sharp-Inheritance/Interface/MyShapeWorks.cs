@@ -10,6 +10,5 @@ namespace C_sharp_Inheritance.Interface
         object Save();
         object Update();
         object Delete();
-
     }
 }

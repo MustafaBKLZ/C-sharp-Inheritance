@@ -7,17 +7,9 @@ namespace C_sharp_Inheritance.Polymorphism
 {
     class MyRectangle : MyShape
     {
-
         public override object Draw()
         {
             return "Drawed Rectangle";
         }
-
-
-
-
-
-
-
     }
 }

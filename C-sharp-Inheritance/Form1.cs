@@ -51,6 +51,9 @@ namespace C_sharp_Inheritance
             teacher_list.Add(new Inheritance.Person.Teacher(txt_teacher_ad.Text, txt_teacher_soyAd.Text, dt_teacher_dogum_Tar.Value, txt_teacher_cinsiyet.Text, txt_teacher_unvan.Text));
             MessageBox.Show("Eklendi");
             tc_listele();
+
+
+            
         }
         private void btn_teacher_liste_Click(object sender, EventArgs e)
         {

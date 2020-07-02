@@ -10,6 +10,6 @@ namespace C_sharp_Inheritance.Polymorphism
         public override object Draw()
         {
             return "Drawed Square";
-        }
+        } 
     }
 }

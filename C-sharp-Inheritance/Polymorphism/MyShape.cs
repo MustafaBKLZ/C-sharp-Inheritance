@@ -24,9 +24,5 @@ namespace C_sharp_Inheritance.Polymorphism
             return this.GetType().Name + " Updated";
         }
 
-
-
-
-
     }
 }

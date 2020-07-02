@@ -11,8 +11,5 @@ namespace C_sharp_Inheritance.Polymorphism
         {
             return "Drawed Circle";
         }
-
-
-
     }
 }
